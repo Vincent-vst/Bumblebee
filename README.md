@@ -12,3 +12,25 @@ Bumblebee is a simple command line tool that display :
 - Song   
 
 
+## Prerequisite   
+
+`sudo pacman -S playerctl`  
+
+
+## Install  
+
+
+`chmod +x bumblebee`  
+`./bumblebee`  
+
+-------------------   
+
+### In order to add it to your startup :  
+
+*In bash :*  
+
+*In zsh :*  
+
+*In fish :*  
+
+

@@ -13,6 +13,7 @@ RED='\033[0;31m'
 ORANGE='\033[0;33m'
 BLUE='\033[0;34m'
 PINK='\033[0;35m'
+GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
          # ___                      
@@ -23,4 +24,27 @@ NC='\033[0m' # No Color
      # _/\ __)/_)
      # \/-____\/
 
+# printf "I ${RED}love${NC} Stack Overflow\n"
+
+
+# printf "           ___\n  "
+# printf "        (.· |\n  "                     
+# printf "        (<> |\n  "
+# printf "       / __  \ \n  "
+# printf "      ( /  \ /|\n "
+# printf "      /\ __)/_)\n  "
+# printf "     \/-____\/\n "
+
+#              __
+#             ( o`-
+#             /  \
+#             |  |
+#              ^^ BP
+
+
+printf "             ${RED}__\n"
+printf "            ${RED}( ${BLUE}o'${ORANGE}-\n"
+printf "           ${ORANGE}_${RED}/  \ ${ORANGE}_ \n"
+printf "            ${RED}|  |\n"
+printf "             ${ORANGE}^^ \n"
 

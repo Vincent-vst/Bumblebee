@@ -1,11 +1,45 @@
 #! /bin/bash 
 
+#! /bin/bash 
+
+# Black        0;30     Dark Gray     1;30
+# Red          0;31     Light Red     1;31
+# Green        0;32     Light Green   1;32
+# Brown/Orange 0;33     Yellow        1;33
+# Blue         0;34     Light Blue    1;34
+# Purple       0;35     Light Purple  1;35
+# Cyan         0;36     Light Cyan    1;36
+# Light Gray   0;37     White         1;37
+
+RED='\033[0;31m'
+ORANGE='\033[0;33m'
+BLUE='\033[0;34m'
+LIGHT_BLUE='\033[1;34m'
+PINK='\033[0;35m'
+YELLOW='\033[0;33m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+#              __
+#             ( o`-
+#             /  \
+#             |  |
+#              ^^ BP
+
 host="$(hostname)"
-os='Linux'	# I'd just like to interject for a moment...
+os="$(cat /etc/os-release | head -n 1 | grep -o '".*"' | tr -d '"')" 
+# os='Linux'	# I'd just like to interject for a moment...
 kernel="$(uname -sr)"
 uptime="$(uptime | awk -F, '{sub(".*up ",x,$1);print $1}' | sed -e 's/^[ \t]*//')"
-packages='unknown'
 shell="$(basename "${SHELL}")"
 
 
-echo $host 
+printf "						\n"
+printf "            ${RED}__ \n"
+printf "           ${RED}( ${BLUE}o'${ORANGE}- 	${PINK}OS 	💾${BLUE} $os\n"
+printf "          ${ORANGE}_${RED}/  \ ${ORANGE}_ 	${PINK}HOST 	🔥${BLUE} $host\n"
+printf "           ${RED}|  | 	${PINK}SHELL 	🐢${BLUE} $shell\n"
+printf "            ${ORANGE}^^	 	${PINK}SONG 	📻${BLUE} $uptime \n"
+printf "						\n"
+
+

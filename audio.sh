@@ -1,9 +1,12 @@
 #!/bin/sh
-for i in /proc/[0-9]*/fd/*
-do
-    var="$(readlink $i)"
-    if test x"$var" != x"${var#/dev/snd/pcm}"
-    then
-        echo $i
-    fi
-done
+
+
+player_status=$(playerctl status 2> /dev/null)
+
+if [ "$player_status" = "Playing" ]; then
+    echo "$(playerctl metadata artist) - $(playerctl metadata title)"
+elif [ "$player_status" = "Paused" ]; then
+    echo "$(playerctl metadata artist) - $(playerctl metadata title)"
+else
+    echo "None - None"
+fi
