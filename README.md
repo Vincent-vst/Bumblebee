@@ -1,21 +1,23 @@
 # Bumblebee
 
-A minial fetch for POSIX
+<img src='./demo.png'>  
+
 
 ## About  
 
-Bumblebee is a simple command line tool that display :   
+Bumblebee is a minial fetch for POSIX
+It's a simple command line tool that display :   
 - OS  
-- Shell  
-- Terminal  
-- Emails  
+- Host  
+- Uptime  
 - Song   
 
 
 ## Prerequisite   
 
-`sudo pacman -S playerctl`  
-
+*change those commands to suit your favorite package manager*  
+`sudo apt install playerctl`  
+`sudo apt install jq`  
 
 ## Install  
 
@@ -25,12 +27,26 @@ Bumblebee is a simple command line tool that display :
 
 -------------------   
 
-### In order to add it to your startup :  
+### In order to add it to your startup :    
 
 *In bash :*  
+```sh
+echo $(pwd)/bumblebee >> ~/.bashrc
+```
 
 *In zsh :*  
+```sh
+echo $(pwd)/bumblebee >> ~/.zshrc
+```
 
 *In fish :*  
+```sh
+# in your config.fish  
+function fish_greeting
+	./bumblebee
+end 
+```
+
+
 
 
