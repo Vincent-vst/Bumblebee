@@ -39,7 +39,7 @@ NC='\033[0m' # No Color
 #             ( o`-
 #             /  \
 #             |  |
-#              ^^ BP
+#              ^^ 
 
 
 printf "             ${RED}__\n"

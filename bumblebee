@@ -28,18 +28,18 @@ NC='\033[0m' # No Color
 
 host="$(hostname)"
 os="$(cat /etc/os-release | head -n 1 | grep -o '".*"' | tr -d '"')" 
-# os='Linux'	# I'd just like to interject for a moment...
 kernel="$(uname -sr)"
 uptime="$(uptime | awk -F, '{sub(".*up ",x,$1);print $1}' | sed -e 's/^[ \t]*//')"
 shell="$(basename "${SHELL}")"
+song=$(bash audio.sh)
 
 
 printf "						\n"
 printf "            ${RED}__ \n"
 printf "           ${RED}( ${BLUE}o'${ORANGE}- 	${PINK}OS 	💾${BLUE} $os\n"
-printf "          ${ORANGE}_${RED}/  \ ${ORANGE}_ 	${PINK}HOST 	🔥${BLUE} $host\n"
-printf "           ${RED}|  | 	${PINK}SHELL 	🐢${BLUE} $shell\n"
-printf "            ${ORANGE}^^	 	${PINK}SONG 	📻${BLUE} $uptime \n"
+printf "          ${ORANGE}_${RED}/  \ ${ORANGE}_ 	${PINK}HOST 	🔥${BLUE} $(whoami)@$host\n"
+printf "           ${RED}|  | 	${PINK}UPTIME 	🐢${BLUE} $uptime\n"
+printf "            ${ORANGE}^^	 	${PINK}SONG 	📻${BLUE} $song \n"
 printf "						\n"
 
 
