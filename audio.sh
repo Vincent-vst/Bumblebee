@@ -7,10 +7,7 @@ parser(){
     echo "$1" "$2"
 }
 
-if [ "$player_status" = "Playing" ]; then
-    echo $(playerctl metadata title) | awk '{print $1, $2, $3}'
-elif [ "$player_status" = "Paused" ]; then
-    # echo "$(playerctl metadata artist) - $(playerctl metadata title)"
+if [ "$player_status" = "Playing" ] || [ "$player_status" = "Paused" ]; then
     echo $(playerctl metadata title) | awk '{print $1, $2, $3}'
 else
     echo $(bash quote.sh)
