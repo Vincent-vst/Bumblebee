@@ -16,25 +16,6 @@ PINK='\033[0;35m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
-         # ___                      
-        # (.· |                       
-        # (<> |
-       # / __  \
-      # ( /  \ /|
-     # _/\ __)/_)
-     # \/-____\/
-
-# printf "I ${RED}love${NC} Stack Overflow\n"
-
-
-# printf "           ___\n  "
-# printf "        (.· |\n  "                     
-# printf "        (<> |\n  "
-# printf "       / __  \ \n  "
-# printf "      ( /  \ /|\n "
-# printf "      /\ __)/_)\n  "
-# printf "     \/-____\/\n "
-
 #              __
 #             ( o`-
 #             /  \
