@@ -33,13 +33,15 @@ uptime="$(uptime | awk -F, '{sub(".*up ",x,$1);print $1}' | sed -e 's/^[ \t]*//'
 shell="$(basename "${SHELL}")"
 song=$(bash audio.sh)
 
-
-printf "						\n"
-printf "            ${RED}__ \n"
-printf "           ${RED}( ${BLUE}o'${ORANGE}- 	${PINK}OS 	💾${BLUE} $os\n"
-printf "          ${ORANGE}_${RED}/  \ ${ORANGE}_ 	${PINK}HOST 	🔥${BLUE} $(whoami)@$host\n"
-printf "           ${RED}|  | 	${PINK}UPTIME 	🐢${BLUE} $uptime\n"
-printf "            ${ORANGE}^^	 	${PINK}SONG 	📻${BLUE} $song \n"
-printf "						\n"
-
+{
+	printf "						\n"
+	printf "            ${RED}__ \n"
+	printf "           ${RED}( ${BLUE}o'${ORANGE}- 	${PINK}OS 	💾${BLUE} $os\n"
+	printf "          ${ORANGE}_${RED}/  \ ${ORANGE}_ 	${PINK}HOST 	🔥${BLUE} $(whoami)@$host\n"
+	printf "           ${RED}|  | 	${PINK}UPTIME 	🐢${BLUE} $uptime\n"
+	printf "            ${ORANGE}^^	 	${PINK}SONG 	📻${BLUE} $song \n"
+	printf "						\n"
+} || {
+	echo 'error'1>&2
+}
 
