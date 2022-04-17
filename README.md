@@ -5,7 +5,7 @@
 
 ## About  
 
-Bumblebee is a minial fetch for POSIX
+Bumblebee is a minial fetch for POSIX   
 It's a simple command line tool that display :   
 - OS  
 - Host  
